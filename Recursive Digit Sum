@@ -1,0 +1,13 @@
+def magic(num):
+    total=0
+    for n in num:
+        total+=int(n)
+    return total
+        
+
+def superDigit(n, k):
+    # Write your code here
+    temp=magic(n)*k
+    while temp>9:
+        temp=magic(str(temp))
+    return temp
